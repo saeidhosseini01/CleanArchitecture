@@ -23,5 +23,5 @@ public interface IBaseRepository<T> where T : BaseEntity
     void Update(T entity);
     void Delete(T entity);
     Task<T> GetByGuidAsync(Guid guid,CancellationToken cancellationToken);
-    Task<IEnumerable<T>> GetAllAsync(CancellationToken cancellationToken );
+    Task<List<T>> GetAllAsync(CancellationToken cancellationToken );
 }

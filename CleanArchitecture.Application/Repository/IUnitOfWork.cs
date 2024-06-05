@@ -10,6 +10,6 @@ namespace CleanArchitecture.Application.Repository
 
     public interface IUnitOfWork
     {
-        void SaveChange(CancellationToken cancellationToken );
+        Task SaveChange(CancellationToken cancellationToken );
     }
 }
