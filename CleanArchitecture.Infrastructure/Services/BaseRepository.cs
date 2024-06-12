@@ -1,6 +1,6 @@
 ﻿using CleanArchitecture.Application.Repository;
 using CleanArchitecture.Domain.Entitis.Common;
-using CleanArchitecture.Persistence.DataDbContext;
+using CleanArchitecture.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

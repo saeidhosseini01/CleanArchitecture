@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture.Application.Repository;
-using CleanArchitecture.Persistence.DataDbContext;
+using CleanArchitecture.Infrastructure.Context;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,15 +1,6 @@
 using CleanArchitecture.Application.Repository;
 using CleanArchitecture.Infrastructure.Services;
 
-
-
-
-
-
-
-using CleanArchitecture.Persistence.DataDbContext;
-
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +16,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.ConfigurePersistence(builder.Configuration);
+//builder.Services.ConfigurePersistence(builder.Configuration);
 
 var app = builder.Build();
 
