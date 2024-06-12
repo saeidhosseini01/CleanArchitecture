@@ -1,4 +1,6 @@
 ﻿using CleanArchitecture.Application.Repository;
+
+using CleanArchitecture.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +16,6 @@ using System.Text;
 using System.Threading.Tasks;
 using CleanArchitecture.Infrastructure.Context;
 
-
-
-
 namespace CleanArchitecture.Infrastructure.Context
 {
     public static class ServiceExtentions
@@ -25,8 +24,8 @@ namespace CleanArchitecture.Infrastructure.Context
         {
             var connectionString = configuration.GetConnectionString("test");
             services.AddDbContext<DataDbContext>(opt => opt.UseSqlite(connectionString));
-
-        
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }
